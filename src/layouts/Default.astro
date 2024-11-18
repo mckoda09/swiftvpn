@@ -1,13 +1,45 @@
 ---
+import { SEO } from "astro-seo";
 import "../styles/main.css";
 ---
 
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <title>SwiftVPN</title>
+    <SEO
+      title="SwiftVPN"
+      description="Ваш личный VPN. Попробуйте уже сегодня за 1 рубль"
+      openGraph={{
+        basic: {
+          title: "SwiftVPN",
+          type: "website",
+          image: "https://i.imgur.com/ng88kNu.png",
+        },
+      }}
+      twitter={{
+        creator: "@mckoda09",
+      }}
+      extend={{
+        // extending the default meta tags
+        meta: [
+          {
+            name: "twitter:image",
+            content: "https://i.imgur.com/ng88kNu.png",
+          },
+          { name: "twitter:title", content: "SwiftVPN" },
+          {
+            name: "twitter:description",
+            content: "Ваш личный VPN. Попробуйте уже сегодня за 1 рубль",
+          },
+        ],
+      }}
+    />
   </head>
   <body class="bg-neutral-900 text-white">
     <slot />
