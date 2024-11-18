@@ -3,6 +3,33 @@ import { Image } from "astro:assets";
 import Default from "../layouts/Default.astro";
 import Favicon from "../../public/favicon.svg";
 import Card from "../components/Card.astro";
+
+const faq = [
+  {
+    q: "Безопасен ли SwiftVPN?",
+    a: "Используется технология шифрования от Google (Jigsaw). Мы не храним логи вашей активности.",
+  },
+  {
+    q: "Какие преимущества у SwiftVPN?",
+    a: "Высокие скорости, отсутствие логирования, поддержка всех популярных платформ, неограниченное количество устройств на одной лицензии, простая настройка.",
+  },
+  {
+    q: "Можно попробовать бесплатно?",
+    a: "Пробный период — всего 1 рубль за месяц",
+  },
+  {
+    q: "Можно ли использовать одну лицензию на нескольких устройствах?",
+    a: "Да, одна лицензия подходит для неограниченного количества устройств.",
+  },
+  {
+    q: "Есть ли ограничения по скорости или трафику?",
+    a: "Нет, никаких ограничений нет.",
+  },
+  {
+    q: "Как мне связаться с поддержкой, если возникнут проблемы?",
+    a: "Тех. поддержка работает круглосуточно в боте в Telegram.",
+  },
+];
 ---
 
 <Default>
@@ -127,6 +154,18 @@ import Card from "../components/Card.astro";
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="container p-7">
+    <div class="text-3xl text-center py-7">FAQ</div>
+    {
+      faq.map(({ q, a }) => (
+        <div class="py-5 space-y-3">
+          <div class="text-xl font-semibold">{q}</div>
+          <div class="text-neutral-400">{a}</div>
+        </div>
+      ))
+    }
   </div>
 
   <div
