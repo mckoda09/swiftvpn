@@ -116,9 +116,24 @@ const faq = [
         </div>
       </div>
       <div class="col-span-full"></div>
+
+      {
+        Astro.url.search && (
+          <div class="col-span-full text-red-500 border border-red-500 rounded-xl p-9 text-3xl">
+            Черная пятница! -10%
+          </div>
+        )
+      }
       <div class="rounded-xl p-9 space-y-5 border border-neutral-700">
         <div class="text-lg font-semibold">1 месяц</div>
-        <div class="text-5xl">{Astro.url.search ? 134 : 149}₽</div>
+        <div class="text-5xl">
+          <span
+            class={Astro.url.search &&
+              "line-through decoration-8 decoration-red-500"}
+          >
+            149</span
+          >{Astro.url.search && <span class="text-red-500"> 134</span>}₽
+        </div>
         <br />
         <div>
           <a
@@ -131,7 +146,14 @@ const faq = [
       </div>
       <div class="rounded-xl p-9 space-y-5 border border-neutral-700">
         <div class="text-lg font-semibold">6 месяцев</div>
-        <div class="text-5xl">{Astro.url.search ? 494 : 549}₽ 🔥</div>
+        <div class="text-5xl">
+          <span
+            class={Astro.url.search &&
+              "line-through decoration-8 decoration-red-500"}
+          >
+            509</span
+          >{Astro.url.search && <span class="text-red-500"> 494</span>}₽ 🔥
+        </div>
         <br />
         <div>
           <a
@@ -144,7 +166,14 @@ const faq = [
       </div>
       <div class="rounded-xl p-9 space-y-5 border border-neutral-700">
         <div class="text-lg font-semibold">12 месяцев</div>
-        <div class="text-5xl">{Astro.url.search ? 944 : 1049}₽</div>
+        <div class="text-5xl">
+          <span
+            class={Astro.url.search &&
+              "line-through decoration-8 decoration-red-500"}
+          >
+            1049</span
+          >{Astro.url.search && <span class="text-red-500"> 944</span>}₽
+        </div>
         <br />
         <div>
           <a
