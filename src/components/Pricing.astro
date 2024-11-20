@@ -1,8 +1,7 @@
 ---
 import Price from "./Price.astro";
 
-console.log(Astro.url.search);
-const isLow = Astro.url.search == "?blackfriday";
+const isLow = Astro.url.searchParams.get("blackfriday") == "";
 ---
 
 <div class="container p-7 py-16">
