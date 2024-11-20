@@ -1,0 +1,31 @@
+---
+import Price from "./Price.astro";
+
+const isLow = Astro.url.search == "?blackfriday";
+---
+
+<div class="container p-7 py-16">
+  <div class="grid gap-7 lg:grid-cols-3">
+    <div
+      class="rounded-xl p-9 space-y-3 border border-neutral-700 bg-neutral-800 col-span-full"
+    >
+      <div class="text-3xl font-semibold">Попробуйте за 1₽</div>
+      <div class="text-neutral-400">
+        Доступ ко всем функциям всего за рубль!
+      </div>
+      <br />
+      <div>
+        <a
+          href="https://t.me/mySwiftVPN_bot"
+          class="bg-white text-neutral-900 px-6 py-3 rounded-lg font-tiny"
+        >
+          ПОПРОБОВАТЬ
+        </a>
+      </div>
+    </div>
+
+    <Price title="1 месяц" price={149} {isLow} />
+    <Price title="6 месяцев" price={549} {isLow} />
+    <Price title="12 месяцев" price={1049} {isLow} />
+  </div>
+</div>

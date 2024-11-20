@@ -1,0 +1,55 @@
+---
+import Card from "./Card.astro";
+---
+
+<div class="container p-7 py-16 space-y-32">
+  <div class="flex items-center justify-center">
+    <div class="space-y-5 text-center flex flex-col items-center">
+      <div class="text-5xl font-light">Ваш личный 🛡️ VPN</div>
+      <div>
+        Подключайтесь к <span class="font-tiny">SWIFTVPN</span> в Telegram.
+        <br />
+        Всего 1₽
+      </div>
+      <br />
+      <div>
+        <a
+          href="https://t.me/mySwiftVPN_bot"
+          class="bg-white text-neutral-900 px-6 py-3 rounded-lg font-tiny"
+        >
+          ПЕРЕЙТИ
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-9"
+  >
+    <Card
+      icon="tabler:shield-lock"
+      title="Безопасный."
+      text="Наш VPN работает на Jigsaw — технологии от Google."
+    />
+    <Card
+      icon="tabler:shopping-bag-heart"
+      title="Пробный период."
+      text="Вы можете попробовать наш VPN всего за 1₽."
+    />
+    <Card
+      icon="tabler:brand-speedtest"
+      title="Высокая скорость."
+      text="Мы используем первоклассное оборудование."
+    />
+    <Card
+      icon="tabler:device-laptop"
+      title="Работает на всех платформах."
+      text="IOS, Android, Windows, macOS, Linux."
+    />
+    <Card
+      icon="tabler:user-bolt"
+      title="Личный."
+      text="Каждый пользователь получает свой уникальный ключ."
+    />
+  </div>
+</div>
