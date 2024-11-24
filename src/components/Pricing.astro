@@ -1,7 +1,5 @@
 ---
 import Price from "./Price.astro";
-
-const isLow = Astro.url.searchParams.get("blackfriday") == "";
 ---
 
 <div class="container p-7 py-16">
@@ -24,8 +22,8 @@ const isLow = Astro.url.searchParams.get("blackfriday") == "";
       </div>
     </div>
 
-    <Price title="1 месяц" price={149} {isLow} />
-    <Price title="6 месяцев" price={549} {isLow} />
-    <Price title="12 месяцев" price={1049} {isLow} />
+    <Price title="1 месяц" price={149} />
+    <Price title="6 месяцев" price={549} />
+    <Price title="12 месяцев" price={1049} />
   </div>
 </div>

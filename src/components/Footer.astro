@@ -1,5 +1,9 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
 <div
-  class="container p-7 flex items-center justify-between text-sm text-neutral-400"
+  class="container p-7 flex flex-col md:flex-row items-center justify-between text-sm text-neutral-400 gap-3"
 >
   <div>
     © SwiftVPN, {new Date().toLocaleDateString("ru", { year: "numeric" })}
@@ -9,5 +13,13 @@
     <a href="https://telegra.ph/Dogovor-oferty-08-24" class="md:hover:underline"
       >Договор оферты</a
     >
+  </div>
+
+  <div>
+    <img
+      src="https://yookassa.ru/files/Guide_files/logo-white.svg"
+      alt="YooKassa"
+      width="72"
+    />
   </div>
 </div>
